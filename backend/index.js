@@ -4,7 +4,9 @@ const mysql = require("mysql");
 
 const app = express();
 
-const SELECT_ALL_PRODUCTS_QUERY = "SELECT * FROM products LIMIT 3";
+const SELECT_ALL_PRODUCTS_QUERY =
+  //   "SELECT * FROM products WHERE productLine like '%moto%' LIMIT 10";
+  "SELECT * FROM products WHERE productCode like '%fff%' LIMIT 10";
 
 const connection = mysql.createConnection({
   host: "localhost",
